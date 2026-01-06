@@ -1,0 +1,7 @@
+{
+  "name": "UMI OS",
+  "description": "A futuristic, glassmorphic personal intelligence workspace featuring a memory stream, smart context analysis, and granular user settings.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
