@@ -16,6 +16,7 @@ const mockUser: User = {
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<View>('workspace');
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   // Update DOM for Tailwind Dark Mode
   useEffect(() => {
@@ -39,6 +40,8 @@ const App: React.FC = () => {
         onChangeView={setCurrentView} 
         isDarkMode={isDarkMode}
         toggleTheme={toggleTheme}
+        isCollapsed={isSidebarCollapsed}
+        toggleSidebar={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
       />
 
       <main className="flex-1 h-full relative overflow-hidden transition-all duration-300">
